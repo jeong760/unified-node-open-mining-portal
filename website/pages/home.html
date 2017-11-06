@@ -1,16 +1,25 @@
 <div class="row">
-	<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-		<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-0" data-widget-editbutton="false">
-			<header>
-				<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-				<h2>Global Stats</h2>
-			</header>
-			<div>
-				<div class="jarviswidget-editbox">
-				</div>
-				<div class="widget-body">
-					<div class="table-responsive">
-						<table class="table table-bordered">
+	<div class="col-md-12">
+        <div class="box box-solid">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-bar-chart"></i>Pool Hashrate</h3>
+            </div>
+<div id="bottomCharts" data-info="#50B432", "#ED561B", "#DDDF00", "#24CBE5", "#64E572",+ "#FF9655", "#FFF263", "#6AF9C4"> 
+													<div class="chartWrapper">
+													<div id="poolHashRateChart"></div>
+												</div>
+												</div>
+	    </div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+        <div class="box box-solid box-primary">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-cog"></i> Global Stats</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-striped">
 							<thead>
 								<tr>
 									<th>Algo</th>
@@ -33,18 +42,14 @@
 			</div>
 		</div>
 	</article>
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-0" data-widget-editbutton="false">
-                        <header>
-                                <span class="widget-icon"> <i class="fa fa-table"></i> </span>
-                                <h2>Pools / Coins</h2>
-                        </header>
-                        <div>
-                                <div class="jarviswidget-editbox">
-                                </div>
-                                <div class="widget-body">
-                                        <div class="table-responsive">
-                                                <table class="table table-bordered">
+        <div class="row">
+	<div class="col-md-12">
+        <div class="box box-solid box-danger">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-cog"></i> Pools/Coins</h3>
+            </div>
+            <div class="box-body no-padding">
+                <table class="table table-striped">
                                                         <thead>
                                                                 <tr>
                                                                         <th>Coin</th>
@@ -66,12 +71,9 @@
                                 </div>
                         </div>
                 </div>
-        </article>
-    </div>
-</div>
-
 <script>
-    $(function() {
+window.statsSource = new EventSource("/api/live_stats");
+$(function() {
         statsSource.addEventListener('message', function (e) {
             var stats = JSON.parse(e.data);
             for (algo in stats.algos) {
@@ -81,7 +83,8 @@
             for (var pool in stats.pools) {
                 $('#statsMiners' + pool).text(stats.pools[pool].workerCount);
                 $('#statsHashrate' + pool).text(stats.pools[pool].hashrateString);
-            }
-        });
-    });
+				}
+pulseLiveUpdate();
+});
+});
 </script>

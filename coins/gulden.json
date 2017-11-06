@@ -1,0 +1,5 @@
+{
+    "name": "Gulden",
+    "symbol": "NLG",
+    "algorithm": "scrypt"
+}
