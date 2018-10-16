@@ -44,7 +44,7 @@
 	 "log4js": "3.0.6",
 	 "bitcoin": "3.0.1",
         "node-json-minify": "1.0.0",
-        "redis": "*",
+        "redis": "^2.8.0",
         "mysql": "*",
         "async": "2.6.1",
         "express": "4.13.4",
