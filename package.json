@@ -24,11 +24,11 @@
         "vekexasia",
         "TheSeven",
         "ahmed",
-	"zone117x",
-	"elitemobb",
-	"altnuts",
-	"infernoman",
-	"sigwo"
+	 "zone117x",
+	 "elitemobb",
+	 "altnuts",
+	 "infernoman",
+	 "sigwo"
     ],
     "main": "init.js",
     "bin": {
