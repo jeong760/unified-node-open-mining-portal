@@ -11,9 +11,9 @@
         "bitcoin",
         "litecoin",
         "scrypt",
-	"merged",
-	"multipool",
-	"multicoin"
+	 "merged",
+	 "multipool",
+	 "multicoin"
     ],
     "homepage": "https://github.com/jeong760/unified-node-open-mining-portal",
     "bugs": {
