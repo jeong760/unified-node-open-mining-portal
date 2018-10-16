@@ -40,7 +40,7 @@
     },
     "dependencies": {
         "merged-pooler": "git://github.com/jeong760/node-stratum-pool",
-         "dateformat": "3.0.3",
+        "dateformat": "3.0.3",
 	 "log4js": "3.0.6",
 	 "bitcoin": "3.0.1",
         "node-json-minify": "1.0.0",
