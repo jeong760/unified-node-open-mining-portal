@@ -414,7 +414,7 @@ this.getCoins = function(cback){
 
     this.getReadableHashRateString = function(hashrate){
         var i = -1;
-        var byteUnits = [ ' KH', ' MH', ' GH', ' TH', ' PH' ];
+        var byteUnits = [ ' KH', ' MH', ' GH', ' TH', ' PH', 'EH', 'ZH', 'YH' ];
         do {
             hashrate = hashrate / 1000;
 			i++;
